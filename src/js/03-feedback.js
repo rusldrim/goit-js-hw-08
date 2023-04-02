@@ -19,7 +19,7 @@ formElement.addEventListener('submit', event => {
 	formElement.removeEventListener('input', handleAddSubmitLocalStorage);
 });
 	
-function verifyLocalStorage() {
+function verifyStorage() {
 	const storText = JSON.parse(localStorage.getItem(STORAGE_KEY));	
 
 	if (storText) {
@@ -28,4 +28,4 @@ function verifyLocalStorage() {
 	}
 }
 	
-verifyLocalStorage();
+verifyStorage();
