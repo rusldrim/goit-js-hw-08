@@ -1,5 +1,4 @@
 import throttle from 'lodash.throttle';
-
 const LOCAL_KEY = 'feedback-form-state';
 
 form = document.querySelector('.feedback-form');
@@ -17,19 +16,19 @@ function onInputData(e) {
 }
 
 function reloadPage() {
-   if (dataForm) {
+  if (dataForm) {
      email.value = dataForm.email || '';
      message.value = dataForm.message || '';
-    }
+   }
 }
 
 function onFormSubmit(e) {
-   e.preventDefault();
-   console.log({ email: email.value, message: message.value });
+  e.preventDefault();
+  console.log({ email: email.value, message: message.value });
 
    if (email.value === '' || message.value === '') {
      return alert('Please fill in all the fields!');
-    }
+   }
 
    localStorage.removeItem(LOCAL_KEY);
    e.currentTarget.reset();
